@@ -60,7 +60,7 @@ while num_usuario != num_aleatorio:
 
 print(f"El número era {num_aleatorio}. Intentos: {intentos}.")
 
-""""
+"""
 6) Desarrolla un programa que imprima en pantalla todos los números pares comprendidos 
 entre 0 y 100, en orden decreciente. 
 """
@@ -69,8 +69,7 @@ for i in range(100, -1, -1):
     print(i)
 
 """
-7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un 
-número entero positivo indicado por el usuario.
+7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un número entero positivo indicado por el usuario.
 """
 suma: int = 0
 num: int = int(input("Ingrese un número entero positivo: "))
@@ -83,8 +82,54 @@ print("La suma de los números entre 0 y", num, "es:", suma)
 programa debe indicar cuántos de estos números son pares, cuántos son impares, cuántos son 
 negativos y cuántos son positivos. (Nota: para probar el programa puedes usar una cantidad 
 menor, pero debe estar preparado para procesar 100 números con un solo cambio). 
+"""
+num_pares: int = 0
+num_impares: int = 0
+num_positivos: int = 0
+num_negativos: int = 0
+num: int = 0
+for i in range(100):
+  num = int(input("Ingrese un número entero: "))
+  if num % 2 == 0:
+    num_pares += 1
+  else:
+    num_impares += 1
+  
+  if num > 0:
+    num_positivos += 1
+  elif num < 0:
+    num_negativos += 1
+
+print("Números pares:", num_pares)
+print("Números impares:", num_impares)
+print("Números positivos:", num_positivos)
+print("Números negativos:", num_negativos)
+
+
+"""
 9) Elabora un programa que permita al usuario ingresar 100 números enteros y luego calcule la 
 media de esos valores. (Nota: puedes probar el programa con una cantidad menor, pero debe 
 poder procesar 100 números cambiando solo un valor). 
+"""
+promedio: float = 0.0
+suma: int = 0
+
+for i in range(100):
+  num = int(input("Ingrese un número entero: "))
+  suma += num
+
+promedio = suma / 100
+print("La media de los números ingresados es:", promedio)
+
+"""
 10) Escribe un programa que invierta el orden de los dígitos de un número ingresado por el 
-usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745. """
+usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745. 
+"""
+num:int = int(input("Ingrese un número entero: "))
+num_invertido:int = 0
+
+while num > 0:
+  num_invertido = num_invertido * 10 + num % 10
+  num = num // 10
+
+print(num_invertido)

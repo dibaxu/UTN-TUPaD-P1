@@ -1,0 +1,1 @@
+print(8 in [9.1, 8.5, 'hola', True])
